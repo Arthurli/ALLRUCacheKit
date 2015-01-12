@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #define kDefaultCacheNumber 100
 
+@class ALLRUCacheObject;
+
 @interface ALLRUCacheKit : NSObject
 
 @property (nonatomic, assign) NSInteger cacheNumber;

@@ -8,6 +8,21 @@
 
 #import "ALLRUCacheKit.h"
 
+@implementation ALLRUCacheObject
+
+- (instancetype)initWithObject:(id)cacheObject andCacheKey:(NSString *)cacheKey
+{
+    self = [super init];
+    if (self) {
+        self.cacheObject = cacheObject;
+        self.cacheKey = cacheKey;
+    }
+    
+    return self;
+}
+
+@end
+
 @interface ALLRUCacheKit ()
 
 @property (nonatomic, strong) NSMutableDictionary* cachePool;
