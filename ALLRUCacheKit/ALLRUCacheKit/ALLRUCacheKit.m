@@ -136,10 +136,10 @@
             prevObject.nextObject = nextObject;
             nextObject.prevObject = prevObject;
         } else if (prevObject != nil) {
-            self.lastCache = prevObject.cacheObject;
+            self.lastCache = prevObject;
             prevObject.nextObject = nil;
         } else if (nextObject != nil) {
-            self.firstCache = nextObject.cacheObject;
+            self.firstCache = nextObject;
             nextObject.prevObject = nil;
         } else {
             self.lastCache = nil;
