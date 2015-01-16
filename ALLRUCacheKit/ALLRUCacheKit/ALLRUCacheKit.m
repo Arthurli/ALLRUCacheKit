@@ -72,6 +72,12 @@
     if (cacheKey) {
         ALLRUCacheKit *kit = [ALLRUCacheKit defaultCacheKit];
         ALLRUCacheObject *cache = [kit.cachePool objectForKey:cacheKey];
+        
+        if (cache) {
+            [kit removeCacheByKey:cacheKey];
+            [kit addNewCache:cache cacheKey:cacheKey];
+        }
+        
         return cache.cacheObject;
     }
     
